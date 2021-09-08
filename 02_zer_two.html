@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<head>
+	<style type="text/css">
+
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,200&display=swap');
+
+
+
+		body{
+			background-color: #FFE3FE;
+		}
+		#video02{
+			position: relative;
+			bottom: 100px;
+			right: 180px;
+		}
+		#arrow
+		{
+			height: 170px;
+			width:150px	;
+			position: relative;
+			right: 360px;
+			bottom: 120px;
+		}
+		h2{
+			font-family: 'Montserrat', sans-serif;
+			position: absolute;
+			left: 300px;
+			top:30px;
+            font-size: 50px;
+            display: inline-block;
+		}
+		p{
+			position: absolute;
+			left: 500px;
+			top:100px;
+		}
+		#zero_smiling{
+			position: relative;
+			top:50px;
+			right:200px;
+			border-style: dotted;
+			border-width: 5px
+		}
+		#smile_p{
+			position: absolute;
+			display:inline-block;
+			left: 8px;
+			top: 230px;
+			font-size: 15px 
+		}
+		#o2_honey{
+			position: relative;
+			right:880px;
+			top: 300px;
+			display:inline-block;
+
+		}
+		#sweet{
+			position: absolute;
+			display: inline-block;
+			left: 230px;
+			top: 430px;
+
+		}
+		#hamburger_menu{
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			cursor: pointer;			
+		}
+		#joke_02{
+			position:absolute;
+			display: inline-block;
+			top: 100px;
+			left: 1300px;
+		}
+		#buttons{
+			display: flex;
+			position: relative;
+			left: 1000px;
+			display: inline-block;
+
+		}
+
+	</style>
+</head>
+<body>
+	
+	<video height="300" width="500" autoplay muted loop id="video02">
+		<source src="cute zero two.mp4" type=video/mp4>
+	</video>
+	<img src="arrow.png" width="200" height="300" id="arrow">
+	<img src="zero_smiling.jpg" width="200" height="200" id="zero_smiling">
+	<p id="smile_p">She always smile and when she do tht she jus look like the shining moon.<br>
+	   She likes to be this and when i look her like This my heart will melt<br>
+	   Do you know she likes honey more than anything will See That......	</p>
+	<h2>zero two</h2><p>boku na darling</p>
+	<img src="honey_02.jpg" id="o2_honey" width="200" height="200" style="border-style: dotted;border-width: 5px ">
+	<p id="sweet"> Well You see Zero two Honey so muc. <br>
+	    If you saw in anime the flash back<br>
+	    Hiro started her to eat sweet <br>
+	    She like sweet more cuz its a taste <br>
+	    That hiro taught her...... </p>
+	<a href=""><img src="pngfind.com-photography-vector-png-3229312.png" height="30" width="30" id="hamburger_menu"></a>  
+		<img id="slider" src="02_sad.jpg" height="200" width="200"> 
+		<p id="joke_02"></p>
+		<div id="buttons">
+		<button onclick="feed()">feed her</button>
+		<button onclick="pet()">pet her head</button>
+		<button onclick="joke()">tell somthing good</button>
+		<button onclick="hand()">hold her hand</button>
+		</div>
+		
+	<script type="text/javascript">
+		var images = [
+			"02_eating.jpg",
+			"02_headpat.jpg",
+			"02_smiling_3.jpg",
+			"02_holding_hands.jpg"
+		];
+		var slimg = document.getElementById('slider')
+		function feed() {
+			slimg.src = images[0];
+		}
+		function pet() {
+			slimg.src = images[1];
+		}
+		function joke(){
+			slimg.src = images[2];
+			var jokes = [
+			document.getElementById('joke_02').innerHTML = "woo didnt know moon was jus a reflection of you",
+			document.getElementById('joke_02').innerHTML = "are you a magician cuz when i see yoou everything else dissapeares",
+			document.getElementById('joke_02').innerHTML = "who said there is no angel.then who are u "
+			];
+			var thing = jokes[Math.floor(Math.random()*jokes.length)];
+			document.getElementById('joke_02').innerHTML = thing;
+		}
+		function hand(){
+			slimg.src = images[3];
+		}
+	</script>
+</body>
